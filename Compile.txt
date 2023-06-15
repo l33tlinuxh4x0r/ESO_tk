@@ -1,5 +1,5 @@
 How to compile for Windows:
-python -m nuitka --disable-console --onefile --windows-icon-from-ico=esotux.png ESO_ttk.py
+python -m nuitka --disable-console --onefile --enable-plugin=tk-inter --windows-icon-from-ico=esotux.png --include-data-file=esotux.png=esotux.png
 
 How to compile for Linux:
-python -m nuitka --disable-console --onefile --linux-icon=esotux.png ESO_ttk.py
+python -m nuitka --disable-console --onefile --linux-icon=esotux.png --include-data-file=esotux.png=esotux.png ESO_ttk.py
