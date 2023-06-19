@@ -1,5 +1,8 @@
+import os, sys
 import platform
 import tkinter as tk
+import zenity
+from tkinter import scrolledtext
 from addondownloader import AddonDownloader
 from pathlib import Path
 from threading import Thread
@@ -82,7 +85,7 @@ aobutton.grid(row=2, column=0, sticky="ew")
 
 # Addons links
 addonslinkslbl = ttk.Label(text="Links to ESOUI.com addon pages, one per line")
-addon_link_textview = tk.Text(wrap="none")
+addon_link_textview = scrolledtext.ScrolledText(undo=True, wrap="none")
 addon_link_textview.insert(tk.END, addons)
 addonslinkslbl.grid(row=3, column=0, sticky="w")
 addon_link_textview.grid(row=4, column=0, sticky="nsew")
@@ -106,4 +109,3 @@ ESO_tk.geometry(f"{windowWidth}x{windowHeight}+{(get_monitors()[0].width - windo
 
 if __name__ == "__main__":
     ESO_tk.mainloop()
-
