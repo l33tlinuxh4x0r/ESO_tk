@@ -28,8 +28,8 @@ class AddonDownloader():
         links = self.addons.split("\n")
         self.file_number = 0
         for link in links:
-            if link != "":
-                info = re.findall("https://www.esoui.com/downloads/info(\d*)", link)[0]
+            if link != "" and link.startswith("#") != True:
+                info = re.findall("esoui.com/downloads/info(\d*)", link)[0]
                 download_url = "https://cdn.esoui.com/downloads/file" + info + "/" + str(int(time.time()))
                 file = self.download(self.file_number, download_url)
                 if file == False:
@@ -71,4 +71,3 @@ class AddonDownloader():
     def end(self):
         self.set_status_text("Done! Addons downloaded and unzipped.")
         messagebox.showinfo("Success!", "Addons downloaded and unzipped to " + self.addons_location)
-
