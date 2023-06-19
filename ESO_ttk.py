@@ -1,7 +1,6 @@
 import os, sys
 import platform
 import tkinter as tk
-import zenity
 from tkinter import scrolledtext
 from addondownloader import AddonDownloader
 from pathlib import Path
