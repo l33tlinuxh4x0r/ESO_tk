@@ -1,6 +1,9 @@
 # ESO_tk
 Cross platform Elder Scrolls Online addon downloader.
 
+Replaced by: https://github.com/l33tlinuxh4x0r/wxESOAD
+
+
 Screenshot of the Linux Version:
 
 
